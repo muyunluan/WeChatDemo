@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WeChat</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_search">Search</string>
+    <string name="action_plus">Plus</string>
+    <string name="action_album">Photos</string>
+    <string name="action_collection">Collection</string>
+    <string name="action_card">Card</string>
+    <string name="action_settings">Setting</string>
+    <string name="action_feed">FeedBack</string>
+    <string name="plus_group_chat">Group Chat</string>
+    <string name="plus_add_friend">Add Contacts</string>
+    <string name="plus_video_chat">Vedio Chat</string>
+    <string name="plus_scan">Scan QR Code</string>
+    <string name="plus_take_photo">Take Photo</string>
+
+</resources>
