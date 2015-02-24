@@ -23,27 +23,27 @@ import android.view.Window;
 public class MainActivity extends FragmentActivity {
 
 	/**
-	 * 聊天界面的Fragment
+	 * Chat Fragment
 	 */
 	private ChatFragment chatFragment;
 
 	/**
-	 * 发现界面的Fragment
+	 * Found Fragment
 	 */
 	private FoundFragment foundFragment;
 
 	/**
-	 * 通讯录界面的Fragment
+	 * Contacts Fragment
 	 */
 	private ContactsFragment contactsFragment;
 
 	/**
-	 * PagerSlidingTabStrip的实例
+	 * PagerSlidingTabStrip instance
 	 */
 	private PagerSlidingTabStrip tabs;
 
 	/**
-	 * 获取当前屏幕的密度
+	 * Get metrics of current screen
 	 */
 	private DisplayMetrics dm;
 
@@ -61,27 +61,27 @@ public class MainActivity extends FragmentActivity {
 	}
 
 	/**
-	 * 对PagerSlidingTabStrip的各项属性进行赋值。
+	 * Set PagerSlidingTabStrip
 	 */
 	private void setTabsValue() {
-		// 设置Tab是自动填充满屏幕的
+		// set tab auto-expand
 		tabs.setShouldExpand(true);
-		// 设置Tab的分割线是透明的
+		// set tab divider color
 		tabs.setDividerColor(Color.TRANSPARENT);
-		// 设置Tab底部线的高度
+		// set tab underline height
 		tabs.setUnderlineHeight((int) TypedValue.applyDimension(
 				TypedValue.COMPLEX_UNIT_DIP, 1, dm));
-		// 设置Tab Indicator的高度
+		// set tab indicator height
 		tabs.setIndicatorHeight((int) TypedValue.applyDimension(
 				TypedValue.COMPLEX_UNIT_DIP, 4, dm));
-		// 设置Tab标题文字的大小
+		// set tab text size
 		tabs.setTextSize((int) TypedValue.applyDimension(
 				TypedValue.COMPLEX_UNIT_SP, 16, dm));
-		// 设置Tab Indicator的颜色
+		// set tab indicator color
 		tabs.setIndicatorColor(Color.parseColor("#45c01a"));
-		// 设置选中Tab文字的颜色 (这是我自定义的一个方法)
+		// set selected tab text color (added method)
 		tabs.setSelectedTextColor(Color.parseColor("#45c01a"));
-		// 取消点击Tab时的背景色
+		// set tab background color when canceling 
 		tabs.setTabBackground(0);
 	}
 
@@ -91,7 +91,7 @@ public class MainActivity extends FragmentActivity {
 			super(fm);
 		}
 
-		private final String[] titles = { "聊天", "发现", "通讯录" };
+		private final String[] titles = { "Chat", "Found", "Contacts" };
 
 		@Override
 		public CharSequence getPageTitle(int position) {
