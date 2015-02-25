@@ -1,6 +1,9 @@
 package com.example.wechat;
 
+import com.example.camera.TakePhotoActivity;
+
 import android.content.Context;
+import android.content.Intent;
 import android.view.ActionProvider;
 import android.view.MenuItem;
 import android.view.SubMenu;
@@ -62,7 +65,10 @@ public class PlusActionProvider extends ActionProvider {
 				.setOnMenuItemClickListener(new OnMenuItemClickListener() {
 					@Override
 					public boolean onMenuItemClick(MenuItem item) {
-						return false;
+						Intent take_photo_intent = new Intent();
+						take_photo_intent.setClass(context, TakePhotoActivity.class);
+						context.startActivity(take_photo_intent);
+						return true;
 					}
 				});
 	}
@@ -72,4 +78,5 @@ public class PlusActionProvider extends ActionProvider {
 		return true;
 	}
 
+	
 }

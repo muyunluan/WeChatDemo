@@ -15,5 +15,6 @@
     <string name="plus_video_chat">Vedio Chat</string>
     <string name="plus_scan">Scan QR Code</string>
     <string name="plus_take_photo">Take Photo</string>
-
+	<string name="imagebutton_capture">Cpature</string>
+	
 </resources>
