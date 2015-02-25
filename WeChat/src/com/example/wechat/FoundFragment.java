@@ -26,7 +26,7 @@ public class FoundFragment extends Fragment {
 		v.setLayoutParams(params);
 		v.setLayoutParams(params);
 		v.setGravity(Gravity.CENTER);
-		v.setText("发现界面");
+		v.setText("Found Fragment");
 		v.setTextSize((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 12, dm));
 		fl.addView(v);
 		return fl;
