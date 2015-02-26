@@ -2,6 +2,10 @@
 
 ChangeLog
 
+  2015-02-24
+  - clean Chinese command
+  - add TakePhotoActivity
+
   2015-02-19
    - init
 
@@ -12,5 +16,4 @@ Note
 
 TODO
   
-  1. Clean Chinese command
-  2. Complete blank features, like ScanQRCode, TakePhoto
+  1. Complete blank features, like ScanQRCode
