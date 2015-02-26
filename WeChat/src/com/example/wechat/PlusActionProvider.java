@@ -1,6 +1,7 @@
 package com.example.wechat;
 
 import com.example.camera.TakePhotoActivity;
+import com.example.qr_codescan.MipcaActivityCapture;
 
 import android.content.Context;
 import android.content.Intent;
@@ -57,7 +58,11 @@ public class PlusActionProvider extends ActionProvider {
 				.setOnMenuItemClickListener(new OnMenuItemClickListener() {
 					@Override
 					public boolean onMenuItemClick(MenuItem item) {
-						return false;
+						Intent scan_intent = new Intent();
+						scan_intent.setClass(context, MipcaActivityCapture.class);
+						scan_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+						context.startActivity(scan_intent);
+						return true;
 					}
 				});
 		subMenu.add(context.getString(R.string.plus_take_photo))

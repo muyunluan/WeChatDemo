@@ -36,6 +36,11 @@
             android:name="com.example.camera.TakePhotoActivity">
             
         </activity>
+
+        <activity
+            android:name= "com.example.qr_codescan.MipcaActivityCapture">
+            
+        </activity>
     </application>
 
 </manifest>

@@ -16,5 +16,6 @@
     <string name="plus_scan">Scan QR Code</string>
     <string name="plus_take_photo">Take Photo</string>
 	<string name="imagebutton_capture">Cpature</string>
-	
+	<string name="menu_settings">Settings</string>
+    <string name="scan_text">Forcus QR Code in the frame</string>
 </resources>
