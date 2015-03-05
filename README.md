@@ -2,6 +2,10 @@
 
 ChangeLog:
 
+  2015-03-04
+  - add SettingActionProvider
+  - add Photos item to system album
+
   2015-02-25
   - add QRCode Scan feature
 

@@ -158,13 +158,9 @@ containing a value of this type.
     }
     public static final class id {
         public static final int about_version_code=0x7f07000e;
-        public static final int action_album=0x7f07001d;
-        public static final int action_card=0x7f07001f;
-        public static final int action_collection=0x7f07001e;
-        public static final int action_feed=0x7f070021;
         public static final int action_plus=0x7f07001c;
         public static final int action_search=0x7f07001b;
-        public static final int action_settings=0x7f070020;
+        public static final int action_settings=0x7f07001d;
         /**  Messages IDs 
          */
         public static final int auto_focus=0x7f070000;

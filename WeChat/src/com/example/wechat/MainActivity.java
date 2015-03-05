@@ -12,6 +12,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -47,6 +48,10 @@ public class MainActivity extends FragmentActivity {
 	 */
 	private DisplayMetrics dm;
 
+	private PlusActionProvider mPlusActionProvider;
+	private SettingActionProvider mSettingActionProvider;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -131,6 +136,9 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.main, menu);
+		
+//		MenuItem plusItem = menu.findItem(R.id.action_plus);
+//		mPlusActionProvider = (PlusActionProvider) MenuItemCompat.getActionProvider(plusItem);
 		return true;
 	}
 
