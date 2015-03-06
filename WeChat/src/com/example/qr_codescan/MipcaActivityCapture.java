@@ -91,10 +91,10 @@ public class MipcaActivityCapture extends Activity implements Callback , View.On
 			this.finish();
 			break;
 		case R.id.button_function:
-			//打开手机中的相册
+			//open album from device
 			Intent innerIntent = new Intent(Intent.ACTION_GET_CONTENT); //"android.intent.action.GET_CONTENT"
 	        innerIntent.setType("image/*");
-	        Intent wrapperIntent = Intent.createChooser(innerIntent, "选择二维码图片");
+	        Intent wrapperIntent = Intent.createChooser(innerIntent, "Choose QR picture");
 	        this.startActivityForResult(wrapperIntent, REQUEST_CODE);
 			break;
 		}
@@ -128,7 +128,7 @@ public class MipcaActivityCapture extends Activity implements Callback , View.On
 		if(resultCode == RESULT_OK){
 			switch(requestCode){
 			case REQUEST_CODE:
-				//获取选中图片的路径
+				//get URL of selected picture
 				Cursor cursor = getContentResolver().query(data.getData(), null, null, null, null);
 				if (cursor.moveToFirst()) {
 					photo_path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
@@ -136,7 +136,7 @@ public class MipcaActivityCapture extends Activity implements Callback , View.On
 				cursor.close();
 				
 				mProgress = new ProgressDialog(MipcaActivityCapture.this);
-				mProgress.setMessage("正在扫描...");
+				mProgress.setMessage("Scanning...");
 				mProgress.setCancelable(false);
 				mProgress.show();
 				
@@ -165,7 +165,7 @@ public class MipcaActivityCapture extends Activity implements Callback , View.On
 	}
 	
 	/**
-	 * 扫描二维码图片的方法
+	 * The way to scan QR picture
 	 * @param path
 	 * @return
 	 */
@@ -174,12 +174,12 @@ public class MipcaActivityCapture extends Activity implements Callback , View.On
 			return null;
 		}
 		Hashtable<DecodeHintType, String> hints = new Hashtable<DecodeHintType, String>();
-		hints.put(DecodeHintType.CHARACTER_SET, "UTF8"); //设置二维码内容的编码
+		hints.put(DecodeHintType.CHARACTER_SET, "UTF8"); 
 
 		BitmapFactory.Options options = new BitmapFactory.Options();
-		options.inJustDecodeBounds = true; // 先获取原大小
+		options.inJustDecodeBounds = true; // get original size
 		scanBitmap = BitmapFactory.decodeFile(path, options);
-		options.inJustDecodeBounds = false; // 获取新的大小
+		options.inJustDecodeBounds = false; // get new size
 		int sampleSize = (int) (options.outHeight / (float) 200);
 		if (sampleSize <= 0)
 			sampleSize = 1;
@@ -243,7 +243,7 @@ public class MipcaActivityCapture extends Activity implements Callback , View.On
 	}
 	
 	/**
-	 * 处理扫描结果
+	 * process scan result
 	 * @param result
 	 * @param barcode
 	 */
@@ -255,7 +255,7 @@ public class MipcaActivityCapture extends Activity implements Callback , View.On
 	}
 	
 	/**
-	 * 跳转到上一个页面
+	 * back to previous page
 	 * @param resultString
 	 * @param bitmap
 	 */

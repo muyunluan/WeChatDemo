@@ -2,6 +2,9 @@
 
 ChangeLog:
 
+  2015-03-05
+  - add Contacts list
+
   2015-03-04
   - add SettingActionProvider
   - add Photos item to system album

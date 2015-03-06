@@ -39,6 +39,38 @@ public class SettingActionProvider extends ActionProvider {
 				}
 		    	   
 		       });
+		subMenu.add(context.getString(R.string.action_collection))
+		.setIcon(R.drawable.ofm_collect_icon)
+		.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+			@Override
+			public boolean onMenuItemClick(MenuItem item) {
+				return false;
+			}
+		});
+		subMenu.add(context.getString(R.string.action_card))
+		.setIcon(R.drawable.ofm_card_icon)
+		.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+			@Override
+			public boolean onMenuItemClick(MenuItem item) {
+				return false;
+			}
+		});
+		subMenu.add(context.getString(R.string.action_feed))
+		.setIcon(R.drawable.ofm_feedback_icon)
+		.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+			@Override
+			public boolean onMenuItemClick(MenuItem item) {
+				return false;
+			}
+		});
+		subMenu.add(context.getString(R.string.action_settings))
+		.setIcon(R.drawable.ofm_setting_icon)
+		.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+			@Override
+			public boolean onMenuItemClick(MenuItem item) {
+				return false;
+			}
+		});
 	}
 	
 	@Override

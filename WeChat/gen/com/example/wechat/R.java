@@ -133,49 +133,53 @@ containing a value of this type.
         public static final int actionbar_search_icon=0x7f020005;
         public static final int background_tab=0x7f020006;
         public static final int ic_launcher=0x7f020007;
-        public static final int logo=0x7f020008;
-        public static final int mm_title_back_btn=0x7f020009;
-        public static final int mm_title_back_focused=0x7f02000a;
-        public static final int mm_title_back_normal=0x7f02000b;
-        public static final int mm_title_back_pressed=0x7f02000c;
-        public static final int mm_title_btn_focused=0x7f02000d;
-        public static final int mm_title_btn_menu_normal=0x7f02000e;
-        public static final int mm_title_btn_normal=0x7f02000f;
-        public static final int mm_title_btn_pressed=0x7f020010;
-        public static final int mm_title_right_btn=0x7f020011;
-        public static final int mmtitle_bg_alpha=0x7f020012;
-        public static final int ofm_add_icon=0x7f020013;
-        public static final int ofm_camera_icon=0x7f020014;
-        public static final int ofm_card_icon=0x7f020015;
-        public static final int ofm_collect_icon=0x7f020016;
-        public static final int ofm_feedback_icon=0x7f020017;
-        public static final int ofm_group_chat_icon=0x7f020018;
-        public static final int ofm_photo_icon=0x7f020019;
-        public static final int ofm_qrcode_icon=0x7f02001a;
-        public static final int ofm_setting_icon=0x7f02001b;
-        public static final int ofm_video_icon=0x7f02001c;
-        public static final int qrcode_scan_line=0x7f02001d;
+        public static final int icon=0x7f020008;
+        public static final int logo=0x7f020009;
+        public static final int mm_title_back_btn=0x7f02000a;
+        public static final int mm_title_back_focused=0x7f02000b;
+        public static final int mm_title_back_normal=0x7f02000c;
+        public static final int mm_title_back_pressed=0x7f02000d;
+        public static final int mm_title_btn_focused=0x7f02000e;
+        public static final int mm_title_btn_menu_normal=0x7f02000f;
+        public static final int mm_title_btn_normal=0x7f020010;
+        public static final int mm_title_btn_pressed=0x7f020011;
+        public static final int mm_title_right_btn=0x7f020012;
+        public static final int mmtitle_bg_alpha=0x7f020013;
+        public static final int ofm_add_icon=0x7f020014;
+        public static final int ofm_camera_icon=0x7f020015;
+        public static final int ofm_card_icon=0x7f020016;
+        public static final int ofm_collect_icon=0x7f020017;
+        public static final int ofm_feedback_icon=0x7f020018;
+        public static final int ofm_group_chat_icon=0x7f020019;
+        public static final int ofm_photo_icon=0x7f02001a;
+        public static final int ofm_qrcode_icon=0x7f02001b;
+        public static final int ofm_setting_icon=0x7f02001c;
+        public static final int ofm_video_icon=0x7f02001d;
+        public static final int qrcode_scan_line=0x7f02001e;
     }
     public static final class id {
         public static final int about_version_code=0x7f07000e;
-        public static final int action_plus=0x7f07001c;
-        public static final int action_search=0x7f07001b;
-        public static final int action_settings=0x7f07001d;
+        public static final int action_plus=0x7f070023;
+        public static final int action_search=0x7f070022;
+        public static final int action_settings=0x7f070024;
         /**  Messages IDs 
          */
         public static final int auto_focus=0x7f070000;
         public static final int button_back=0x7f070015;
         public static final int button_function=0x7f070017;
-        public static final int camera_preview=0x7f070019;
+        public static final int camera_preview=0x7f070020;
+        public static final int contacts_list_view=0x7f07001c;
         public static final int decode=0x7f070001;
         public static final int decode_failed=0x7f070002;
         public static final int decode_succeeded=0x7f070003;
         public static final int encode_failed=0x7f070004;
         public static final int encode_succeeded=0x7f070005;
         public static final int gridview=0x7f07000c;
-        public static final int imagebutton_capture=0x7f07001a;
+        public static final int imagebutton_capture=0x7f070021;
         public static final int include1=0x7f070012;
         public static final int launch_product_query=0x7f070006;
+        public static final int name=0x7f07001b;
+        public static final int name_layout=0x7f07001a;
         public static final int pager=0x7f070014;
         public static final int preview_view=0x7f070010;
         public static final int quit=0x7f070007;
@@ -183,10 +187,14 @@ containing a value of this type.
         public static final int return_scan_result=0x7f070009;
         public static final int search_book_contents_failed=0x7f07000a;
         public static final int search_book_contents_succeeded=0x7f07000b;
+        public static final int sort_key=0x7f070019;
+        public static final int sort_key_layout=0x7f070018;
         public static final int split=0x7f07000f;
         public static final int tabs=0x7f070013;
-        public static final int take_photo_activity=0x7f070018;
+        public static final int take_photo_activity=0x7f07001f;
         public static final int textview_title=0x7f070016;
+        public static final int title=0x7f07001e;
+        public static final int title_layout=0x7f07001d;
         public static final int viewfinder_view=0x7f070011;
         public static final int webview=0x7f07000d;
     }
@@ -194,7 +202,9 @@ containing a value of this type.
         public static final int activity_capture=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_title=0x7f030002;
-        public static final int take_photo_activity=0x7f030003;
+        public static final int contact_item=0x7f030003;
+        public static final int fragment_contacts=0x7f030004;
+        public static final int take_photo_activity=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;

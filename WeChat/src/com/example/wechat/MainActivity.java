@@ -81,7 +81,7 @@ public class MainActivity extends FragmentActivity {
 				TypedValue.COMPLEX_UNIT_DIP, 4, dm));
 		// set tab text size
 		tabs.setTextSize((int) TypedValue.applyDimension(
-				TypedValue.COMPLEX_UNIT_SP, 16, dm));
+				TypedValue.COMPLEX_UNIT_SP, 12, dm));
 		// set tab indicator color
 		tabs.setIndicatorColor(Color.parseColor("#45c01a"));
 		// set selected tab text color (added method)
@@ -136,9 +136,6 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.main, menu);
-		
-//		MenuItem plusItem = menu.findItem(R.id.action_plus);
-//		mPlusActionProvider = (PlusActionProvider) MenuItemCompat.getActionProvider(plusItem);
 		return true;
 	}
 
