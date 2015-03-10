@@ -2,6 +2,9 @@
 
 ChangeLog:
 
+  2015-03-09
+  - use SwipeMenuListView for Chat fragment
+
   2015-03-05
   - add Contacts list
 
@@ -35,3 +38,7 @@ TODO:
   2. Clean Chinese comment
 
   3. Adujst UI
+
+  4. Drop SwipeMenuList for Chat fragment
+
+  5. Use Android Contact Lists for Contacts fragment
