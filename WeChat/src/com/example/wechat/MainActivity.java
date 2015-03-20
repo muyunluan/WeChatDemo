@@ -26,8 +26,9 @@ public class MainActivity extends FragmentActivity {
 	/**
 	 * Chat Fragment
 	 */
-	private ChatFragment chatFragment;
-
+	//private ChatFragment chatFragment;
+	private ChatFragmentNew chatFragment;
+	
 	/**
 	 * Found Fragment
 	 */
@@ -113,7 +114,7 @@ public class MainActivity extends FragmentActivity {
 			switch (position) {
 			case 0:
 				if (chatFragment == null) {
-					chatFragment = new ChatFragment();
+					chatFragment = new ChatFragmentNew();
 				}
 				return chatFragment;
 			case 1:

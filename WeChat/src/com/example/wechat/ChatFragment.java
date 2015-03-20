@@ -11,38 +11,30 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.DisplayMetrics;
 import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.FrameLayout.LayoutParams;
 
 import com.baoyz.swipemenulistview.SwipeMenu;
 import com.baoyz.swipemenulistview.SwipeMenuCreator;
 import com.baoyz.swipemenulistview.SwipeMenuItem;
-import com.baoyz.swipemenulistview.SwipeMenuLayout;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.baoyz.swipemenulistview.SwipeMenuListView.OnMenuItemClickListener;
 import com.baoyz.swipemenulistview.SwipeMenuListView.OnSwipeListener;
 
-
-
-
 public class ChatFragment extends Fragment {
-	
+
 	private List<ApplicationInfo> mAppList;
 	private AppAdapter mAdapter;
 	private SwipeMenuListView mListView;
-	
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {		
@@ -52,98 +44,98 @@ public class ChatFragment extends Fragment {
 		mListView = (SwipeMenuListView) chatView.findViewById(R.id.listView);
 		mAdapter = new AppAdapter();
 		mListView.setAdapter(mAdapter);
-		
+
 		// step 1. create a MenuCreator
-				SwipeMenuCreator creator = new SwipeMenuCreator() {
+		SwipeMenuCreator creator = new SwipeMenuCreator() {
 
-					@Override
-					public void create(SwipeMenu menu) {
-						// create "open" item
-						SwipeMenuItem openItem = new SwipeMenuItem(
-								getActivity().getApplicationContext());
-						// set item background
-						openItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
-								0xCE)));
-						// set item width
-						openItem.setWidth(dp2px(90));
-						// set item title
-						openItem.setTitle("Open");
-						// set item title fontsize
-						openItem.setTitleSize(18);
-						// set item title font color
-						openItem.setTitleColor(Color.WHITE);
-						// add to menu
-						menu.addMenuItem(openItem);
+			@Override
+			public void create(SwipeMenu menu) {
+				// create "open" item
+				SwipeMenuItem openItem = new SwipeMenuItem(
+						getActivity().getApplicationContext());
+				// set item background
+				openItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
+						0xCE)));
+				// set item width
+				openItem.setWidth(dp2px(90));
+				// set item title
+				openItem.setTitle("Open");
+				// set item title font size
+				openItem.setTitleSize(18);
+				// set item title font color
+				openItem.setTitleColor(Color.WHITE);
+				// add to menu
+				menu.addMenuItem(openItem);
 
-						// create "delete" item
-						SwipeMenuItem deleteItem = new SwipeMenuItem(
-								getActivity().getApplicationContext());
-						// set item background
-						deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
-								0x3F, 0x25)));
-						// set item width
-						deleteItem.setWidth(dp2px(90));
-						// set a icon
-						deleteItem.setIcon(R.drawable.ic_delete);
-						// add to menu
-						menu.addMenuItem(deleteItem);
-					}
-				};
-				// set creator
-				mListView.setMenuCreator(creator);
+				// create "delete" item
+				SwipeMenuItem deleteItem = new SwipeMenuItem(
+						getActivity().getApplicationContext());
+				// set item background
+				deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
+						0x3F, 0x25)));
+				// set item width
+				deleteItem.setWidth(dp2px(90));
+				// set a icon
+				deleteItem.setIcon(R.drawable.ic_delete);
+				// add to menu
+				menu.addMenuItem(deleteItem);
+			}
+		};
+		// set creator
+		mListView.setMenuCreator(creator);
 
-				// step 2. listener item click event
-				mListView.setOnMenuItemClickListener(new OnMenuItemClickListener() {
-					@Override
-					public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
-						ApplicationInfo item = mAppList.get(position);
-						switch (index) {
-						case 0:
-							// open
-							open(item);
-							break;
-						case 1:
-							// delete
-//							delete(item);
-							mAppList.remove(position);
-							mAdapter.notifyDataSetChanged();
-							break;
-						}
-						return false;
-					}
-				});
-				
-				// set SwipeListener
-				mListView.setOnSwipeListener(new OnSwipeListener() {
-					
-					@Override
-					public void onSwipeStart(int position) {
-						// swipe start
-					}
-					
-					@Override
-					public void onSwipeEnd(int position) {
-						// swipe end
-					}
-				});
+		// step 2. listener item click event
+		mListView.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+			@Override
+			public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
+				ApplicationInfo item = mAppList.get(position);
+				switch (index) {
+				case 0:
+					// open
+					open(item);
+					break;
+				case 1:
+					// delete
+					//							delete(item);
+					mAppList.remove(position);
+					mAdapter.notifyDataSetChanged();
+					break;
+				}
+				return false;
+			}
+		});
 
-				// other setting
-//				listView.setCloseInterpolator(new BounceInterpolator());
-				
-				// test item long click
-				mListView.setOnItemLongClickListener(new OnItemLongClickListener() {
+		// set SwipeListener
+		mListView.setOnSwipeListener(new OnSwipeListener() {
 
-					@Override
-					public boolean onItemLongClick(AdapterView<?> parent, View view,
-							int position, long id) {
-						Toast.makeText(getActivity().getApplicationContext(), position + " long click", 0).show();
-						return false;
-					}
-				});
-		
+			@Override
+			public void onSwipeStart(int position) {
+				// swipe start
+			}
+
+			@Override
+			public void onSwipeEnd(int position) {
+				// swipe end
+			}
+		});
+
+		// other setting
+		//				listView.setCloseInterpolator(new BounceInterpolator());
+
+		// test item long click
+		mListView.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+			@Override
+			public boolean onItemLongClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				Toast.makeText(getActivity().getApplicationContext(), position + " long click", 0).show();
+				return false;
+			}
+		});
+
 		return chatView;
 	}
-	
+
 	private void delete(ApplicationInfo item) {
 		// delete app
 		try {
@@ -176,7 +168,7 @@ public class ChatFragment extends Fragment {
 		}
 	}
 
-	
+
 	class AppAdapter extends BaseAdapter {
 
 		@Override

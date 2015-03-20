@@ -172,7 +172,7 @@ public class SwipeMenuLayout extends FrameLayout {
 			isFling = false;
 			break;
 		case MotionEvent.ACTION_MOVE:
-			// Log.i("byz", "downX = " + mDownX + ", moveX = " + event.getX());
+			Log.i("byz", "downX = " + mDownX + ", moveX = " + event.getX());
 			int dis = (int) (mDownX - event.getX());
 			if (state == STATE_OPEN) {
 				dis += mMenuView.getWidth();
